@@ -6,7 +6,7 @@
 
 This Chrome extension collects the following data:
 
-1. **Amazon product page content** — When you click "Generate ..." the extension extracts visible text from the current Amazon product page (review content, product details). This is done entirely client-side within your browser.
+1. **Amazon product page content** — When you click "Generate Report" the extension extracts visible text from the current Amazon product page (review content, product details). This is done entirely client-side within your browser.
 
 2. **AI API credentials** — You configure an API Key for DeepSeek, OpenAI, or other supported AI providers. This key is stored locally in your browser via `chrome.storage.local` and is never transmitted to any server other than the AI provider you explicitly configure.
 
@@ -24,9 +24,15 @@ This Chrome extension collects the following data:
 ## Third-Party Data Sharing
 
 - **Page content** is transmitted to the AI API provider you have configured in the extension settings. Each provider has its own privacy policy governing how they handle data sent to their APIs.
-- **No analytics, tracking, or telemetry** is used. The extension does not communicate with any server other than:
-  - The AI API provider you configure
+- **Minimal anonymous usage analytics** via Mixpanel is used solely for internal product improvement. We track:
+  - `Extension_Installed` — fired once on first use
+  - `Analysis_Completed` — fired when an analysis completes successfully
+  - Properties sent are limited to: tier (free/pro), extension version, report language, and an anonymous random ID
+  - **No review content, no API keys, no personal data** is ever sent to Mixpanel
+- The extension communicates with the following third-party services:
+  - The AI API provider you configure (e.g., DeepSeek, OpenAI)
   - GitHub Gist (for license key verification, anonymous SHA-256 hashes only)
+  - Mixpanel (for anonymous usage analytics)
 - We do not sell, rent, or share any user data with advertisers or other third parties.
 
 ## User Control
