@@ -1,14 +1,14 @@
-# Privacy Policy for Amazon 供應鏈分析師 (Amazon Review Analyzer)
+# Privacy Policy for Amazon Supply Chain Analyzer
 
-**Last updated:** 2026-07-11
+**Last updated:** 2026-07-12
 
 ## Data Collection
 
 This Chrome extension collects the following data:
 
-1. **Amazon product page content** — When you click "Analyze," the extension extracts visible text from the current Amazon product page (review content, product details). This is done entirely client-side within your browser.
+1. **Amazon product page content** — When you click "Generate ..." the extension extracts visible text from the current Amazon product page (review content, product details). This is done entirely client-side within your browser.
 
-2. **AI API credentials** — You may optionally configure an API Key for DeepSeek, OpenAI, or other supported AI providers. This key is stored locally in your browser via `chrome.storage.local` and is never transmitted to any server other than the AI provider you explicitly configure.
+2. **AI API credentials** — You configure an API Key for DeepSeek, OpenAI, or other supported AI providers. This key is stored locally in your browser via `chrome.storage.local` and is never transmitted to any server other than the AI provider you explicitly configure.
 
 ## How Data Is Used
 
